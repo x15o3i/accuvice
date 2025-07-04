@@ -1,0 +1,509 @@
+/* CSS Reset / Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #1F2937; /* Dark Gray */
+    background-color: #FFFFFF; /* White Backgrounds */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.5em; }
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #1A73E8; /* Strong Blue for links by default */
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section:nth-child(even) {
+    background-color: #F1F5F9; /* Secondary (Light backgrounds) for alternating sections */
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #1A73E8; /* Strong Blue */
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: #0d5abf; /* Darker blue for hover */
+}
+
+.btn-secondary {
+    background-color: #F59E0B; /* Warm Yellow */
+    color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+    background-color: #d48806; /* Darker yellow for hover */
+}
+
+
+/* 1. Navigation Bar */
+#navbar {
+    background: #FFFFFF; /* White background */
+    color: #1F2937;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for sticky nav */
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar .logo {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #1F2937;
+}
+
+#navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+#navbar ul li {
+    margin-left: 20px;
+}
+
+#navbar ul li a {
+    color: #1F2937;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: #1A73E8;
+}
+
+#navbar ul li a.btn-primary {
+    color: #FFFFFF; /* Ensure white text on blue button */
+}
+#navbar ul li a.btn-primary:hover {
+    color: #FFFFFF;
+}
+
+
+/* 2. Hero Section */
+#hero {
+    background: #F1F5F9; /* Soft background or clean white */
+    /* background: #FFFFFF; */
+    text-align: center;
+    padding: 100px 0;
+}
+
+#hero h1 {
+    color: #1F2937;
+}
+
+#hero p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* 3. Why Trust Accuvice? */
+#why-trust {
+    text-align: center;
+}
+#why-trust .trust-blocks {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px; /* Space between cards */
+    margin-top: 40px;
+}
+
+#why-trust .trust-block {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    flex-basis: 30%; /* Distribute space for 3 blocks */
+    text-align: left;
+}
+
+#why-trust .trust-block h3 {
+    color: #1A73E8;
+    margin-bottom: 15px;
+}
+
+/* 4. ROI Highlight Section */
+#roi-highlight {
+    background-color: #1F2937; /* Darker section for contrast */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 80px 0;
+}
+
+#roi-highlight h2 {
+    font-size: 2.5em; /* Bold headline */
+    margin-bottom: 30px;
+}
+
+/* 5. Testimonial / Story Block */
+#testimonial {
+    text-align: center;
+}
+
+#testimonial p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+/* 6. Stats Section */
+#stats {
+    background-color: #F1F5F9; /* Light background */
+    text-align: center;
+}
+
+#stats .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* For responsiveness */
+}
+
+#stats .stat-item {
+    flex-basis: 22%; /* For 4 columns */
+    margin-bottom: 20px; /* Spacing for smaller screens */
+}
+
+#stats .stat-number {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: #1A73E8;
+    margin-bottom: 5px;
+}
+
+#stats .stat-label {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* 7. Sign Up CTA Section */
+#signup-cta {
+    text-align: center;
+    background-color: #FFFFFF; /* White background */
+}
+
+#signup-cta p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+/* 8. Our Clients */
+#clients {
+    text-align: center;
+    background-color: #F1F5F9; /* Light background */
+}
+
+#clients p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#clients .client-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#clients .client-logos span {
+    font-style: italic;
+    color: #777;
+}
+
+/* 9. Our Methodology Section */
+#methodology {
+    text-align: center;
+}
+#methodology h2 {
+    text-transform: uppercase;
+}
+
+#methodology .methodology-steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+#methodology .methodology-step {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    flex-basis: calc(25% - 20px); /* Adjust for 4 items including the repeat */
+    text-align: left;
+}
+#methodology .methodology-step:nth-child(odd) {
+    background: #F1F5F9; /* Alternate background for steps if desired */
+}
+
+
+#methodology .methodology-step h3 {
+    color: #1A73E8;
+    margin-bottom: 15px;
+}
+
+/* 10. Email Newsletter Section */
+#newsletter {
+    background-color: #1A73E8; /* Primary blue background */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 60px 0;
+}
+
+#newsletter h2 {
+    margin-bottom: 30px;
+}
+
+#newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+#newsletter input[type="email"] {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    font-size: 1em;
+}
+
+#newsletter button.btn-primary {
+    background-color: #F59E0B; /* Warm Yellow for this specific button */
+    color: #1F2937; /* Dark text for contrast on yellow */
+}
+#newsletter button.btn-primary:hover {
+    background-color: #d48806;
+}
+
+
+/* 11. Contact/Request A Call Back Form */
+#contact-form-section {
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+#contact-form-section p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="tel"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#contact-form button.btn-primary {
+    align-self: center; /* Center button in form */
+}
+
+/* 12. Footer */
+#footer {
+    background-color: #0F172A; /* Dark background */
+    color: #E2E8F0; /* Light text */
+    padding: 60px 0 30px; /* More padding at top, less at bottom */
+}
+
+#footer .container {
+    /* Keep default container behavior */
+}
+
+#footer .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Responsive wrapping */
+}
+
+#footer .footer-column {
+    flex-basis: 30%; /* Default for 3 columns, adjust if 4 */
+    /* For 4 columns, might need flex-basis: 22%; or similar */
+}
+
+#footer .footer-column h3 {
+    color: #F59E0B; /* Warm Yellow for footer headers */
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+#footer .footer-column ul li {
+    margin-bottom: 10px;
+}
+
+#footer .footer-column ul li a {
+    color: #E2E8F0;
+    transition: color 0.3s ease;
+}
+
+#footer .footer-column ul li a:hover {
+    color: #F59E0B; /* Highlight on hover */
+}
+
+#footer .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #334155; /* Subtle separator line */
+    font-size: 0.9em;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+
+    #why-trust .trust-blocks,
+    #methodology .methodology-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #why-trust .trust-block,
+    #methodology .methodology-step {
+        flex-basis: 80%; /* Wider for stacked items */
+        margin-bottom: 20px;
+    }
+
+    #stats .stat-item {
+        flex-basis: 45%; /* 2 columns on medium screens */
+    }
+
+    #footer .footer-columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #footer .footer-column {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+
+    #navbar .container {
+        flex-direction: column;
+    }
+    #navbar .logo {
+        margin-bottom: 10px;
+    }
+    #navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    #navbar ul li {
+        margin: 5px 0;
+        text-align: center;
+        width: 100%;
+    }
+    #navbar ul li a.btn {
+        display: block; /* Make button full width in mobile nav */
+    }
+
+    #hero {
+        padding: 60px 0;
+    }
+
+    #stats .stat-item {
+        flex-basis: 100%; /* 1 column on small screens */
+    }
+
+    #newsletter form {
+        flex-direction: column;
+    }
+    #newsletter input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #newsletter button.btn-primary {
+        width: 100%;
+    }
+
+    #contact-form input[type="text"],
+    #contact-form input[type="tel"],
+    #contact-form button.btn-primary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Further adjustments for very small screens if needed */
+}
